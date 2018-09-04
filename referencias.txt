@@ -1,3 +1,8 @@
 Teste 
 
 https://github.com/delmiglio/70-480/invitations
+
+Blog Tableless Front-End
+
+https://tableless.com.br/
+http://blog.alura.com.br/
