@@ -8,9 +8,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- IMPORTANDO CSS EXTERNO DENTRO DO HTML (A ORDEM IMPORTA)-->
+    <link rel="stylesheet" type="text/css" href="master.css">
 </head>
+
 <body>
+    <!-- Headings (Cabecalhos) e Paragrafos-->
+    <!-- <h1> até <h6>-->
+    <h1>An Introduction to HTML</h1>
+    <p class="myClass">In this module, we look at the history of HTML and CSS.</p>
+    <h2>In the Beginning</h2>
+    <p>WorldWideWeb was created by Sir Tim Berners-Lee at CERN. </p>
+    <h6>In the Beginning</h6>
+    <!-- Negrito e Italico-->
+    To
+    <strong>emphasize</strong> is to give extra weight to (a communication);
+    <em>"Her gesture emphasized her words"</em>
+    <br> To
+    <b>emphasize</b> is to give extra weight to (a communication);
+    <i>"Her gesture emphasized her words"</i>
+    <br>
+
+    <!-- ul - Lista Nao Ordenada; ol - Lista Ordenada; li - item da lista (pode ser estilizado pelo CSS)-->
+    <ul>
+        <li>Notepad</li>
+        <li id="blue">Textmate</li>
+        <li>Visual Studio</li>
+    </ul>
+    <ol>
+        <li>Notepad</li>
+        <li>Textmate</li>
+        <li>Visual Studio</li>
+    </ol>
+    <!-- ALT -> Texto da imagem (fins de acessibilidade)-->
+    <img src="golfinho.jpg" alt="Golfinho" height="100" width="100" />
+    <!-- ANCHOR (Ancora) - Com Qualquer Coisa-->
+    <a href="http://www.google.com.br" alt="Home Page">Google</a>
+    <!-- Nao Acessar Item do Menu-->
+    <a href="#" alt="Home Page">Google</a>
+    <br>
+    <br>
+    <!-- Posso Mandar Para: Servidor; Posso Executar um Metodo Javascript que vai tratar o conteúdo que o usuário digitou e então esse javascript mandar para o servidor-->
+    <!-- PUT, POST, GET, DELETE -->
+    <!-- PUT - ATUALIZAR; POST - POSTAR (INCLUIR NO BD); GET - TRAZER/BUSCAR (SELECT NO BD); DELETE - DELETAR (DELETAR NO BD)-->
+    <form action="#" method="">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" placeholder="Digite Seu Nome" id="nome" />
+        <br>
+        <br>
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" placeholder="Digite Sua Senha" id="senha" />
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Digite Seu Email" id="email" />
+        <input type="submit" name="Enviar" value="Enviar">
+    </form>
     <!--elemento atributo="">conteudo</elemento-->
-    <strong class="xpto">Conteudo</strong>
+    <!-- <strong class="xpto">Conteudo</strong> -->
+    <!-- DESABILITAR NAS CONFIGURACOES DO BROWSER (NAO POR PAGINA -->
+    <noscript>
+        NAO SUPORTADO
+    </noscript>
+
+    <!-- ESTILOS COMBINADOS -->
+
 </body>
+
+<!-- A ORDEM DE CHAMADA DESSES ARQUIVOS IMPORTA -->
+<script type="text/javascript" src="teste1.js"></script>
+
+
 </html>

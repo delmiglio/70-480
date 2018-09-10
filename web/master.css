@@ -1,0 +1,32 @@
+/* Seletor  de elemento */
+h1 {
+  font-size: 42px;
+  color: pink;
+  font-family: "Segoe UI";
+}
+
+p {
+    color: blue;
+}
+
+/* Seletor de Classe */
+.myClass {
+    color: orange;
+}
+
+/* seletor de ID */
+#nome {
+    border-color: red;
+}
+
+ul li {
+    color: orangered;
+}
+
+ul li[id="blue"] {
+    color: blue;
+}
+
+* {
+    background-color: aliceblue;
+}
