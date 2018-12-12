@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <!-- se ela não for colocada como PRIMEIRA TAG DENTRO DO <HEAD>, o IE simplesmente ignora ela! -->
@@ -14,6 +14,18 @@
         h6 {
             color: #a522aa;
         }
+
+        .validatedOff {
+            background-color: #0ff;
+        }
+
+        .validatedFine {
+            border-color: #0f0;
+        }
+
+        .validationError {
+            border-color: #f00;
+        }
     </style>
 </head>
 
@@ -27,10 +39,10 @@
     <h6>In the Beginning</h6>
     <!-- Negrito e Italico-->
     To
-    <strong>emphasize</strong> is to give extra weight to (a communication);
-    <em>"Her gesture emphasized her words"</em>
+    <strong>emphasize</strong> is to give extra weight to (com strong);
+    <em>"Her gesture emphasized her words com em"</em>
     <br> To
-    <b>emphasize</b> is to give extra weight to (a communication);
+    <b>emphasize</b> is to give extra weight to (com tag b);
     <i>"Her gesture emphasized her words"</i>
     <br>
 
@@ -71,18 +83,37 @@
     </form>
     <!--elemento atributo="">conteudo</elemento-->
     <!-- <strong class="xpto">Conteudo</strong> -->
-    <!-- DESABILITAR NAS CONFIGURACOES DO BROWSER (NAO POR PAGINA -->
+    <!-- O noscrip será a icionado, adicionando as tags ao html somente se 
+        a versao do browser nao suportar javascript ou estiver desabilitado -->
     <noscript>
         NAO SUPORTADO
     </noscript>
 
+    <form id="scoreForm" onsubmit="return validateForm();">
+        <div id="penaltiesField" class="field">
+            <input id="penalties" name="penalties" type="text" class = "validatedOff"/>
+        </div>
+        <input type="submit" name="Enviar" value="Enviar">
+    </form>
+
     <p style="color:blue;">
         estilo em linha </p>
 
+    <script>
+        function isSignificant(text) {
+            var notWhitespaceTestRegex = /[^\s]{1,}/;
+            return String(text).search(notWhitespaceTestRegex) != -1;
+        }
+        function validateForm() {
+            var textbox = document.getElementById("penalties");
+            if (!isSignificant(textBox.value)) {
+                textbox.className = "validationError";
+                return false; /* No! Form validation fails */
+            }
+            textbox.className = "validatedFine";
+            return true;
+        }
+    </script>
 </body>
-
 <!-- A ORDEM DE CHAMADA DESSES ARQUIVOS IMPORTA -->
-<script type="text/javascript" src="teste1.js"></script>
-
-
 </html>
